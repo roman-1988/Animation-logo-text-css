@@ -53,3 +53,43 @@ body {
         0 16px 16px rgba(0, 168, 168, 0.12),
 }
 
+.textLogo::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    background: inherit;
+    border-radius: inherit;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+.icon-container:hover .textLogo {
+    animation: fade-in-left 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.35s both;
+}
+
+@keyframes fade-in-left {
+    0% {
+        transform: translateX(-15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out-left {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-8px);
+        opacity: 0;
+    }
+}
+
